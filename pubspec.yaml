@@ -8,7 +8,9 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_custom_tabs: "^0.2.0"
+  flutter_custom_tabs: # version "^0.2.0" did not have sdk constraint changed so using git
+    git:
+      url: https://github.com/droibit/flutter_custom_tabs.git
   html: "^0.13.3"
   cached_network_image:
     git:
