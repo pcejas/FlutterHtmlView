@@ -12,7 +12,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_custom_tabs: ^0.1.0
+  flutter_custom_tabs: # version "^0.2.0" did not have sdk constraint changed so using git
+      git:
+        url: https://github.com/droibit/flutter_custom_tabs.git
 
   flutter_html_view:
     path: ../
