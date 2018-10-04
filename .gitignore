@@ -8,3 +8,7 @@ build/
 ios/.generated/
 packages
 pubspec.lock
+example/android/gradlew
+example/android/gradle/wrapper/gradle-wrapper.properties
+example/android/gradle/wrapper/gradle-wrapper.jar
+example/android/gradlew.bat

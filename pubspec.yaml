@@ -1,6 +1,6 @@
 name: flutter_html_view
 description: Flutter Plugin to render html, Flutter has no default support to render html so this package helps you to render your html to native widgets
-version: 0.5.4
+version: 0.5.8
 author: Karthik Ponnam <ponnamkarthik3@gmail.com>
 homepage: https://github.com/PonnamKarthik/FlutterHtmlView
 
@@ -8,15 +8,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_custom_tabs: # version "^0.2.0" did not have sdk constraint changed so using git
-    git:
-      url: https://github.com/droibit/flutter_custom_tabs.git
+  flutter_custom_tabs: "^0.4.0"
   html: "^0.13.3"
-  cached_network_image:
+  cached_network_image: # forked from "^0.4.2"
     git:
       url: https://github.com/pcejas/flutter_cached_network_image.git
   video_player: "^0.6.4"
-
 
 environment:
   sdk: ">=2.0.0-dev.28.0 <3.0.0"

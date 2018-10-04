@@ -5,10 +5,11 @@ import 'package:url_launcher/url_launcher.dart';
 
 class HtmlText extends StatelessWidget {
   final String data;
+  final Widget style;
 
   BuildContext ctx;
 
-  HtmlText({this.data});
+  HtmlText({this.data, this.style});
 
   void _launchURL(String url) async {
     try {
@@ -31,14 +32,14 @@ class HtmlText extends StatelessWidget {
     if (await canLaunch(url)) {
       await launch(url);
     } else {
-      throw 'Could not launch $url';
+      print('Could not launch $url');
     }
   }
 
   TapGestureRecognizer recognizer(String url) {
     return new TapGestureRecognizer()
       ..onTap = () {
-        if (url.startsWith("http:") || url.startsWith("https:")) {
+        if (url.startsWith("http://") || url.startsWith("https://")) {
           _launchURL(url);
         } else {
           _launchOtherURL(url);
