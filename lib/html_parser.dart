@@ -41,8 +41,8 @@ class HtmlParser {
         widgetList.add(
           new NetworkPlayerLifeCycle(
             src,
-            (BuildContext context, VideoPlayerController controller) =>
-                new AspectRatioVideo(controller),
+                (BuildContext context, VideoPlayerController controller) =>
+            new AspectRatioVideo(controller),
           ),
         );
       } else {
@@ -54,8 +54,8 @@ class HtmlParser {
                 widgetList.add(
                   new NetworkPlayerLifeCycle(
                     src,
-                    (BuildContext context, VideoPlayerController controller) =>
-                        new AspectRatioVideo(controller),
+                        (BuildContext context, VideoPlayerController controller) =>
+                    new AspectRatioVideo(controller),
                   ),
                 );
               }
@@ -70,7 +70,8 @@ class HtmlParser {
         !e.hasContent()) {
       widgetList.add(new HtmlText(data: e.outerHtml, onLaunchFail: this.onLaunchFail));
     }
-      e.children.forEach((e) => _parseChildren(e, widgetList));
+
+    e.children.forEach((e) => _parseChildren(e, widgetList));
   }
 
   List<Widget> parseHTML(String html) {
@@ -84,12 +85,18 @@ class HtmlParser {
     List<dom.Element> scriptElements = docBody.getElementsByTagName("script");
     if (styleElements.length > 0) {
       for (int i = 0; i < styleElements.length; i++) {
-        docBody.getElementsByTagName("style").first.remove();
+        docBody
+            .getElementsByTagName("style")
+            .first
+            .remove();
       }
     }
     if (scriptElements.length > 0) {
       for (int i = 0; i < scriptElements.length; i++) {
-        docBody.getElementsByTagName("script").first.remove();
+        docBody
+            .getElementsByTagName("script")
+            .first
+            .remove();
       }
     }
 
